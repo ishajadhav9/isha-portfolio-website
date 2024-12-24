@@ -122,10 +122,12 @@ p {
 
 /* Hero styles */
 .hero {
+    padding-top: 100rem;
+    padding-bottom: 5rem;
     display: flex;
-    flex-direction: column-reverse;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    gap: 20px;
     color: var(--text);
     margin-bottom: 3rem;
 }
@@ -134,14 +136,15 @@ p {
     padding-top: 2rem;
     height: 400px;
     width: 500px;
-    border-radius: 50%;
-    padding-left: 10rem;
-    margin-bottom: 3rem;
+    border-radius: 10px;
+    padding-left: 8rem;
+    margin-bottom: 10rem;
 }
 
 .hero-info {
-    text-align: center;
-    padding-top: 3rem;
+    text-align: left;
+    padding-top: 6rem;
+    padding-right: 10rem;
 }
 
 .title {
@@ -156,10 +159,24 @@ p {
 .about {
     margin-top: 1rem;
     color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.about-img {
+    padding-top: 2rem;
+    height: 700px;
+    width: 650px;
+    border-radius: 10px;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
 }
 
 .about-info {
     padding-top: 2rem;
+    padding-left: 5rem;
 }
 
 .tech {
@@ -167,6 +184,7 @@ p {
     flex-wrap: wrap;
     gap: 15px;
     margin-bottom: 20px;
+    
 }
 
 .tech img {
@@ -212,7 +230,7 @@ p {
 .download-btn {
     background-color: #c3a1e4;
     color: #151946;
-    padding: 10px 20px;
+    padding: 10px 10px;
     cursor: pointer;
     border-style: solid;
     border-color: #151946;
@@ -314,8 +332,8 @@ p {
 }
 
 .title {
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
     margin: 1px 1px;
     color: #151946;
     border: 0px 2px solid #151946;
@@ -424,6 +442,10 @@ p {
 
 input,
 textarea {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
     background: #ebe0f5;
     color: black;
     border: solid 2px #151946;
@@ -528,3 +550,4 @@ textarea {
         padding: 0.8rem;
     }
 }
+
