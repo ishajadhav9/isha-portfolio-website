@@ -16,7 +16,7 @@ html {
 
 body {
     padding-top: 100px;
-    background: #c9b0e4;
+    background: #f2e7f8;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -210,7 +210,7 @@ p {
 }
 
 .download-btn {
-    background-color: #c9b0e4;
+    background-color: #c3a1e4;
     color: #151946;
     padding: 10px 20px;
     cursor: pointer;
@@ -301,6 +301,26 @@ p {
 
 
 /* Projects styles */
+.back {
+        color: #c9b0e4;
+        font-size: 1rem;
+        position: fixed;
+        padding-top: 1rem;
+}
+
+.back:hover {
+    background-color: #c9b0e4;
+    color: #151946;
+}
+
+.title {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin: 1px 1px;
+    color: #151946;
+    border: 0px 2px solid #151946;
+}
+
 .projects-header {
     padding-top: 0.8rem;
     padding-bottom: 2rem;
@@ -318,35 +338,63 @@ p {
 
 .projects-tab-btn:hover {
     background-color: #151946;
-    color: #c9b0e4;
+    border-color: #151946;
+    box-shadow: 0 3px #3749f2;
+    color: #8a94ea;
 }
 
-.projects-item {
-    margin-left: 5rem;
-    margin-right: 5rem;
-    margin-bottom: 1rem;
-    color: #2a2f5c;
-    font-size: medium;
+
+.project-cards {
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
-.projects-item-img {
+.project-card {
     flex-wrap: wrap;
     grid-template: initial;
-    border-radius: 10px;
-    padding-top: 2rem;
-    height: auto;
-    width: auto;
-    border-radius: 5%;
-    transition: transform 0.3s;
     align-content: center;
     display: inline-table;
-    padding-left: 20rem;
-    padding-right: 20rem;
-
+    width: 400px;
+    height: 350px;
+    margin: 5px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    filter: sepia(5px);
+    /*backdrop-filter: blur(0px);  Frosted glass effect */
+    background: rgba(255, 255, 255, 0.2); /* Transparent white */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.projects-item-img:hover {
-    transform: scale(1.2);
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
+}
+
+.project-info {
+    bottom: 10px;
+    padding-left: 10px;
+    align-items: center;
+    color: #151946;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.project-info h3 {
+    align-items: first baseline;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 1rem;
+    opacity: 0.9;
+    color: #2a2f5c;
+}
+
+.container {
+    margin: 20px;
+    padding: 20px;
 }
 
 
@@ -359,7 +407,7 @@ p {
 .contact-info-icon {
     width: 50px;
     height: 50px;
-    background-color: #a76ee0;
+    background-color: #f2e7fc;
     border: #151946 solid 2px;
     border-radius: 50%;
     display: flex;
@@ -376,7 +424,7 @@ p {
 
 input,
 textarea {
-    background: #b88fe1;
+    background: #ebe0f5;
     color: black;
     border: solid 2px #151946;
     border-radius: 10px;
@@ -390,104 +438,93 @@ textarea {
     padding: 2rem 0;
 }
 
-@media screen and (min-width: 700px) {
-    .container {
-        padding: 4rem 6rem;
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 70px; /* Reduce padding for smaller screens */
     }
 
-    .description {
-        font-size: 1rem;
-    }
-
-    /* Grid */
-    .grid {
-        display: flex;
-        gap: 2rem;
-        flex-wrap: wrap;
-    }
-
-    .grid-item {
-        width: 30%;
-    }
-
-    /* Navigation */
     .nav {
-        padding-left: 6rem;
-        padding-right: 6rem;
-        justify-content: space-between;
-        align-items: baseline;
+        padding: 0.5rem; /* Reduce padding for smaller screens */
+        flex-direction: column;
     }
 
-    .toggler {
-        display: block;
+    .logo {
+        position: relative;
+        left: 0;
+        margin-bottom: 1rem;
     }
 
     .nav-links {
-        position: fixed;
-        flex-direction: row;
-        padding: 0;
-        width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .nav-item {
-        margin: 0 0.5rem;
-        text-align: center;
+    .nav-link {
+        padding: 0.5rem 0;
     }
 
-    .nav-item::after {
+    .toggler {
+        display: block; /* Show toggler for mobile */
         position: absolute;
-        top: 30px;
-        margin: 0;
-        background: none;
+        right: 1rem;
     }
 
-    .nav-item-active {
-        opacity: 1;
-    }
-
-    .nav-item-active::after {
-        background: green;
-    }
-
-    /* Hero */
     .hero {
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        padding: 1rem;
     }
 
-    .hero-info {
-        text-align: left;
+    .hero-img {
+        height: 200px;
+        width: 200px;
+        padding-left: 0;
     }
 
     .title {
-        font-size: 5rem;
+        font-size: 2rem;
     }
 
-    /* About */
-    .about {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .about-img {
-        width: 40%;
+    .about-info,
+    .education-box,
+    .project-card,
+    .certificate img {
+        width: 100%;
+        max-width: 100%;
     }
 
     .about-info {
-        width: 55%;
+        padding-top: 1rem;
     }
 
-    /* Contact */
-    .contact {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .contact-form {
-        width: 55%;
-    }
-
-    .submit-btn {
+    .secondary-title {
         font-size: 1.5rem;
+    }
+
+    .projects-tab-btn {
+        padding: 0.3rem 1rem;
+    }
+
+    .project-card {
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .project-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-info p {
+        font-size: 0.9rem;
+    }
+
+    .certificate img {
+        width: 100%;
+        height: auto;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 0.8rem;
     }
 }
